@@ -42,7 +42,7 @@ for l = landmarks
             %% NBT
             [model,K,m,n] = pd_cl_nbt(Xs,Xt,Ys,options);
             [label, acc,scores] = svmpredict(full(Yt), [(1:n)', K(m+1:end, 1:m)], model);
-            fprintf('\n Error: PD_NBT %.2f%% \n', 100-acc(1));
+            fprintf('\n Error: NSO %.2f%% \n', 100-acc(1));
             errors = [errors; 100-acc(1)];
         end
     end
@@ -114,7 +114,7 @@ for l = landmarks
                 %% NBT
                 [model,K,m,n] = pd_cl_nbt(Xs,Xt,Ys,options);
                 [label, acc,scores] = svmpredict(full(Yt), [(1:n)', K(m+1:end, 1:m)], model);
-                fprintf('\n Error: PD_NBT %.2f%% \n', 100-acc(1));
+                fprintf('\n Error: NSO %.2f%% \n', 100-acc(1));
                 errors = [errors; 100-acc(1)];
             end
         end
@@ -184,7 +184,7 @@ for l = landmarks
         tic;
         [model,K,m,n] = pd_cl_nbt(Xs,Xt,Ys,options);
         [label, acc,scores] = svmpredict(full(Yt), [(1:n)', K(m+1:end, 1:m)], model);
-        fprintf('\n PD_NBT %.2f%% \n', acc(1));
+        fprintf('\n NSO %.2f%% \n', acc(1));
  
                 errors = [errors; 100-acc(1)];
         end

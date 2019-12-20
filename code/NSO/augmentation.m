@@ -1,12 +1,12 @@
-function [Xs,Ys] = augmentation(Xs,Xt,Ys)
+function [Xs,Ys] = augmentation(Xs,sizext,Ys)
 %BASIS_TRANSFER Summary of this function goes here
  C = unique(Ys,'stable');
     sizeC = size(C,1);
-    if size(Xs,1) < size(Xt,1)
+    if size(Xs,1) < sizext
         fprintf("Smaller")
         data = [];
         label = [];
-        diff = size(Xt,1) - size(Xs,1);
+        diff = sizext - size(Xs,1);
         sampleSize = floor(diff / sizeC);
         for c = C'
             idxs = find(Ys == c);
@@ -27,12 +27,12 @@ function [Xs,Ys] = augmentation(Xs,Xt,Ys)
         Xs = data;Ys = label;
     end
    
-    if size(Xs,1) > size(Xt,1)
+    if size(Xs,1) > sizext
         fprintf("Not Smaller\n");
         data = [];
         label = [];
-        diff = size(Xs,1) - size(Xt,1);
-        sampleSize = floor( size(Xt,1) / sizeC);
+        diff = size(Xs,1) - sizext;
+        sampleSize = floor( sizext / sizeC);
         for c = C'
             idxs = find(Ys == c); 
             classData= Xs(idxs,:);
@@ -43,7 +43,7 @@ function [Xs,Ys] = augmentation(Xs,Xt,Ys)
             data = [data; classData];
             label = [label;ones(size(classData,1),1)*c];
         end
-        sampleSize = abs(size(data,1)-size(Xt,1));
+        sampleSize = abs(size(data,1)-sizext);
         c = C(end);
         idxs = find(Ys == c);
         classData= Xs(idxs,:);

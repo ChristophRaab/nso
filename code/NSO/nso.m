@@ -20,7 +20,7 @@ else
     options.svmc = 10;
 end
 
-[Xs,Ys] = augmentation(Xs,Xt,Ys);
+[Xs,Ys] = augmentation(Xs,size(Xt,1),Ys);
 [Xt,Xs]=pd_ny_svd(Xt,Xs,Ys,options.landmarks);
 Xs = zscore(Xs,1);
 Xt = zscore(Xt,1);

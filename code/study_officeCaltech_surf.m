@@ -13,7 +13,7 @@ options.svmc = 10.0;         % SVM: complexity regularizer in LibSVM
 options.g = 40;              % GFK: subspace dimension
 options.tcaNv = 60;          % TCA: numbers of Vectors after reduction
 options.subspace_dim_d = 100;  %SA: Subspace Dimensions
-options.landmarks = 5;     %NBT: Number of Landmarks
+options.landmarks = 125;     %NSO: Number of Landmarks
 
 % JGSA
 options.k = 30;             % subspace base dimension
@@ -63,19 +63,6 @@ for iData = 1:12
     accuracy = [accuracy; mean(acc_data)];
     time = [time; mean(time_data)];
     stdd = [stdd; std(acc_data)];
-    save('sastudy_offficeCaltech_surf.mat','accuracy',"stdd","time")
+    save('study_offficeCaltech_surf.mat','accuracy',"stdd","time")
 end
-save('sastudy_offficeCaltech_surf.mat','accuracy',"stdd","time")
-function [idx1 idx2] = split(Y,nPerClass, ratio)
-% [idx1 idx2] = split(X,Y,nPerClass)
-idx1 = [];  idx2 = [];
-for C = 1 : max(Y)
-    idx = find(Y == C);
-    rn = randperm(length(idx));
-    if exist('ratio')
-        nPerClass = floor(length(idx)*ratio);
-    end
-    idx1 = [idx1; idx( rn(1:min(nPerClass,length(idx))) ) ];
-    idx2 = [idx2; idx( rn(min(nPerClass,length(idx))+1:end) ) ];
-end
-end
+save('study_offficeCaltech_surf.mat','accuracy',"stdd","time")

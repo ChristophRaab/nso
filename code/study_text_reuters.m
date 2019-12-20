@@ -15,7 +15,7 @@ options.svmc = 10.0;         % SVM: complexity regularizer in LibSVM
 options.g = 40;              % GFK: subspace dimension
 options.tcaNv = 60;          % TCA: numbers of Vectors after reduction
 options.subspace_dim_d = 10;  %SA: Subspace Dimensions
-options.ntvm_ker = 'rbf';     %NTVM: Kernel Type
+options.ntvm_ker = 'rbf';     %NSO: Kernel Type
 % JGSA
 options.k = 30;             % subspace base dimension
 options.T = 10;             % #iterations, default=10

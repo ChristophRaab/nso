@@ -1,5 +1,5 @@
-%% Plot of Nyström Basis Transfer Process
-%This script pltos the process of the basis transfer from target to source
+%% Plot of Nyström Subspace Override Process
+%This script pltos the process of the subspace override transfer from target to source
 %Note for nicer plots the kernelized version of target landmark matrix is
 %used.
 
@@ -7,12 +7,12 @@
 close all;
 clear all;
 fprintf('data=Caltech10_vs_amazon\n');
-load('../data/OfficeCaltech/Caltech10_SURF_L10.mat');
+load('../data/OfficeCaltech/Surf/Caltech10_SURF_L10.mat');
 fts = fts ./ repmat(sum(fts, 2), 1, size(fts, 2));
 Xs = fts;
 Ys = labels;
 
-load('../data/OfficeCaltech/amazon_SURF_L10.mat');
+load('../data/OfficeCaltech/Surf/amazon_SURF_L10.mat');
 fts = fts ./ repmat(sum(fts, 2), 1, size(fts,2));
 Xt = fts;
 Yt = labels;
@@ -120,15 +120,14 @@ s = size(h);
 surf(h);
 colormap winter
 % if mod(i,2)==0
-if i==5 ||i==6
-    colorbar;
-end
+colorbar;
+
 
 set(gcf, 'color', 'none');
-if i > 4 
+
 xlabel('Dimensions','FontSize', 12);
 ylabel('Samples','FontSize', 12);
-end
+zlabel('Surf','FontSize',12);
 % hold off;
 print(int2str(i),"-dpng","-r1000")
 print(int2str(i),"-depsc","-r1000")
