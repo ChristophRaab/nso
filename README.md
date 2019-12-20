@@ -38,6 +38,6 @@ Figure 2: Process of NSO: _plot_process.m_
 
 
 ## Abstract of Submission:
-    Domain adaptation focuses on the reuse of supervised learning models in a new context. Prominent applications can be found in robotics, image processing or web mining. In these areas, learning scenarios change by nature, but often remain related and motivate the reuse of existing supervised models.
+      Domain adaptation focuses on the reuse of supervised learning models in a new context. Prominent applications can be found in robotics, image processing or web mining. In these areas, learning scenarios change by nature, but often remain related and motivate the reuse of existing supervised models.
     While the majority of domain adaptation algorithms utilize all available source and target domain data, we show that efficient domain adaptation requires only a substantially smaller subset from both domains. This makes it more suitable for real-world scenarios where target domain data is rare. The presented approach finds domain invariant representation for source and target data to address domain differences by overriding orthogonal basis structures. By employing a low-rank approximation, the approach remains low in computational time. 
-    The presented idea is evaluated in typical domain adaptation tasks with standard benchmark data.
+    The presented idea is evaluated on typical domain adaptation tasks with standard benchmark data.
