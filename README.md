@@ -1,4 +1,4 @@
-# Nyström Basis Transfer
+# Nyström Subspace Override
 Matlab Source Code for the IJCNN 2020 Paper submission "Low-Rank Subspace Override for Unsupervised Domain Adaptation". 
 
 Folders are self-explaining. 
@@ -19,25 +19,22 @@ _augmentation.m_
 ```matlab 
 [model,K,m,n] = nso(Xs',Xt',Ys,options);
 [label, acc,scores] = svmpredict(full(Yt), [(1:n)', K(m+1:end, 1:m)], model);
-fprintf('\n PD_NBT %.2f%% \n', acc(1));
+fprintf('\n NSO %.2f%% \n', acc(1));
 ```
 Assume traning data Xs with size d x m and test data Xt with size d x n. Label vector Ys and Yt accordingly. 
 nso accecpts the data and an options struct. With this struct the user can specify:
 ```
-NBT Specific:
+NSO Specific:
 options.landmarks ~ Number of Landmarks (int)
 SVM Specific: 
 options.gamma ~ Gamma of SVM (int)
 options.smvc ~ C Parameter of SVM (int)
 options.ker ~ Kernel Type "linear|rbf|lab" (string)
 ```
-The functions outputs a libsvm model and a kernel over training and test data modified. The training data is modified by NBT algorithm. <br/>
+The functions outputs a libsvm model and a kernel over training and test data modified. The training data is modified by NSO algorithm. <br/>
 ## Reproducing Plots:
 Figure 1: Sensitivity of landmark-parameter: _landmarkperformance_plot.m_<br/>
-Figure 2: Process of NBT: _plot_process.m_
-
-## Additional Results: 
-Additional results with another domain adaptation sampling strategy can be obtained with demo_gong.m 
+Figure 2: Process of NSO: _plot_process.m_
 
 
 ## Abstract of Submission:
