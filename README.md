@@ -1,5 +1,5 @@
 # Nyström Subspace Override
-Matlab Source Code for the IJCNN 2020 Paper submission "Low-Rank Subspace Override for Unsupervised Domain Adaptation". 
+Matlab Source Code for the accepted KI 2020 Paper "Low-Rank Subspace Override for Unsupervised Domain Adaptation". 
 
 Folders are self-explaining. 
 
