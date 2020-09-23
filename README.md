@@ -1,7 +1,9 @@
 # Nyström Subspace Override
 Matlab Source Code for the accepted KI 2020 Paper "Low-Rank Subspace Override for Unsupervised Domain Adaptation". 
+[Link to paper (springer)](https://link.springer.com/chapter/10.1007/978-3-030-58285-2_10)
 
 Folders are self-explaining. 
+If you encounter any problems with the repository, please open up an issue here or write me a message!
 
 ## Demo and Reproducing:
 For a demo and reproducing of performance/time results start
