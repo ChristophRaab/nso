@@ -38,6 +38,8 @@ The functions outputs a libsvm model and a kernel over training and test data mo
 Figure 1: Sensitivity of landmark-parameter: _landmarkperformance_plot.m_<br/>
 Figure 2: Process of NSO: _plot_process.m_
 
+## Reproducing of deep learning results:
+See [this repo](https://github.com/ChristophRaab/DSN) for  source code, data and guide for reproducing the deep learning results.
 
 ## Abstract of Submission:
       Domain adaptation focuses on the reuse of supervised learning models in a new context. Prominent applications can be found in robotics, image processing or web mining. In these areas, learning scenarios change by nature, but often remain related and motivate the reuse of existing supervised models.
