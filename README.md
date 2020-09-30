@@ -1,7 +1,9 @@
 # Nyström Subspace Override
-Matlab Source Code for the IJCNN 2020 Paper submission "Low-Rank Subspace Override for Unsupervised Domain Adaptation". 
+Matlab Source Code for the accepted KI 2020 Paper "Low-Rank Subspace Override for Unsupervised Domain Adaptation". 
+[Link to paper (springer)](https://link.springer.com/chapter/10.1007/978-3-030-58285-2_10)
 
 Folders are self-explaining. 
+If you encounter any problems with the repository, please open up an issue here or write me a message!
 
 ## Demo and Reproducing:
 For a demo and reproducing of performance/time results start
@@ -36,6 +38,8 @@ The functions outputs a libsvm model and a kernel over training and test data mo
 Figure 1: Sensitivity of landmark-parameter: _landmarkperformance_plot.m_<br/>
 Figure 2: Process of NSO: _plot_process.m_
 
+## Reproducing of deep learning results:
+See [this repo](https://github.com/ChristophRaab/DSN) for  source code, data and guide for reproducing the deep learning results.
 
 ## Abstract of Submission:
       Domain adaptation focuses on the reuse of supervised learning models in a new context. Prominent applications can be found in robotics, image processing or web mining. In these areas, learning scenarios change by nature, but often remain related and motivate the reuse of existing supervised models.
