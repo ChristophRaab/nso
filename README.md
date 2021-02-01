@@ -1,8 +1,8 @@
 # Python Source code now available!
-For a demo run 
-_pyhon code/nso_demo.py_
-Requirments: Scikit-Learn,Numpy
-Implementation oriented at the Scikit-Learn interface.
+For a demo run <br/>
+_pyhon code/nso_demo.py_<br/>
+Requirments: Scikit-Learn,Numpy<br/>
+Implementation oriented at the Scikit-Learn interface.<br/>
 
 # Nyström Subspace Override
 Matlab Source Code for the accepted KI 2020 Paper "Low-Rank Subspace Override for Unsupervised Domain Adaptation". 
